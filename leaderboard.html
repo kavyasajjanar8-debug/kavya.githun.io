@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Leaderboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="navbar">🏆 Top Donors</div>
+
+<div class="container">
+
+{% for item in foods %}
+    <div class="card">
+        <h3>{{ item.restaurant }}</h3>
+        <p>Impact Score: {{ item.impact }}</p>
+    </div>
+{% endfor %}
+
+<a href="/">⬅ Back</a>
+
+</div>
+
+</body>
+</html>

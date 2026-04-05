@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Restaurant</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="navbar">Add Food 🍽️</div>
+
+<div class="container">
+
+<form action="/add_food" method="POST">
+    <input type="text" name="restaurant" placeholder="Restaurant Name" required>
+    <input type="text" name="food" placeholder="Food Item" required>
+    <input type="number" name="quantity" placeholder="Quantity" required>
+    <input type="text" name="location" placeholder="Location" required>
+
+    <button type="submit">Donate Food</button>
+</form>
+
+<br>
+<a href="/">⬅ Back</a>
+
+</div>
+
+</body>
+</html>

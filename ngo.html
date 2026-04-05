@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NGO</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="navbar">Available Food 🤝</div>
+
+<div class="container">
+
+{% if foods %}
+    {% for item in foods %}
+        <div class="card">
+            <h3>{{ item.restaurant }}</h3>
+            <p>🍛 {{ item.food }}</p>
+            <p>Quantity: {{ item.quantity }}</p>
+            <p>📍 {{ item.location }}</p>
+            <p>Impact: {{ item.impact }}</p>
+        
+
+            <span class="badge">{{ item.badge }}</span>
+
+            <p>💡 {{ item.suggestion }}</p>
+            <button onclick="requestPickup('{{ item.restaurant }}')" style="background: blue; color: white;">
+    🚘 Request Pickup
+</button>
+        </div>
+    {% endfor %}
+{% else %}
+    <p>No food available 😔</p>
+{% endif %}
+
+<a href="/">⬅ Back</a>
+
+</div>
+<script>
+function requestPickup(restaurant) {
+    let ngoName = prompt("Enter NGO Name:");
+
+    if (ngoName) {
+        alert("Pickup requested by " + ngoName + " from " + restaurant);
+    } else {
+        alert("Request cancelled");
+    }
+}
+</script>
+
+</body>
+</html>
