@@ -18,14 +18,10 @@
             <p>Quantity: {{ item.quantity }}</p>
             <p>📍 {{ item.location }}</p>
             <p>Impact: {{ item.impact }}</p>
-        
 
             <span class="badge">{{ item.badge }}</span>
 
             <p>💡 {{ item.suggestion }}</p>
-            <button onclick="requestPickup('{{ item.restaurant }}')" style="background: blue; color: white;">
-    🚘 Request Pickup
-</button>
         </div>
     {% endfor %}
 {% else %}
@@ -35,17 +31,6 @@
 <a href="/">⬅ Back</a>
 
 </div>
-<script>
-function requestPickup(restaurant) {
-    let ngoName = prompt("Enter NGO Name:");
-
-    if (ngoName) {
-        alert("Pickup requested by " + ngoName + " from " + restaurant);
-    } else {
-        alert("Request cancelled");
-    }
-}
-</script>
 
 </body>
 </html>
